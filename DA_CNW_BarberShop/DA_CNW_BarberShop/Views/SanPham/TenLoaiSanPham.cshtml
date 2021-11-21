@@ -1,0 +1,13 @@
+﻿@model List<DA_CNW_BarberShop.Models.tblCategoryProduct>
+
+
+<ul class="product-content__list-title">
+    @{
+        foreach (var item in Model)
+        {
+            <li class="product-content__item-title">
+                <a href="@Url.Action("SanPhamTrongLoai", "SanPham",  new { @MaLoai = item.PK_sCategoryProductID })" , class="product-content__link-title active">@item.sCategoryName</a>
+            </li>
+        }
+    }
+</ul>

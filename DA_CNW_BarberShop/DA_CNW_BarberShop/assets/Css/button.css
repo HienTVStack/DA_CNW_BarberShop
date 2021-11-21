@@ -1,0 +1,27 @@
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    min-width: 150px;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    line-height: 18px;
+    text-align: center;
+    cursor: pointer;
+}
+.btn:hover {
+    opacity: 0.7;
+}
+
+.header-navbar__login-btn {
+    font-size: 1.5rem;
+    line-height: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: var(--yellow-primary-color);
+    border-radius: 5px;
+    font-family: oswald;
+    position: relative;
+}

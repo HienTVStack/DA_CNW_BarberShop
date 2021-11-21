@@ -1,0 +1,345 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Sản phẩm</title>
+    <link href="~/assets/Css/reset.css" rel="stylesheet">
+    <link href="~/assets/Css/grid.css" rel="stylesheet">
+    <link href="~/assets/Css/abstract.css" rel="stylesheet">
+    <link href="~/assets/Css/button.css" rel="stylesheet">
+    <link href="~/assets/Css/style.css" rel="stylesheet">
+    <link href="~/assets/Css/model-login.css" rel="stylesheet">
+    <link href="~/assets/Css/toast-mess.css" rel="stylesheet">
+    <link href="~/assets/Css/media.css" rel="stylesheet">
+    <link href="~/assets/Css/product.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<body>
+    <div class="app">
+        <div class="product-heading grid wide">
+            <div class="product-heading-logo">
+                <img src="~/assets/Images/log-30shine-white.9945e644.jpg" alt=""
+                     class="product-heading-logo__avt">
+            </div>
+            <div class="product-heading-navbar">
+                <div class="product-heading-navbar__search">
+                    @using (Ajax.BeginForm("TimKiem", "Home", new AjaxOptions { InsertionMode = InsertionMode.Replace, HttpMethod = "Get" }))
+                    {
+                        <!-- <div style="display: flex;"> -->
+                        <span class="product-heading-navbar__search-icon">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </span>
+                        <input type="text" class="product-heading-navbar__search-input" name="strSearch" placeholder="Nhập tên sản phẩm, thương hiệu, ...">
+                        <!-- </div> -->
+                        <button class="btn product-heading-navbar__search-btn header-navbar__login-btn">
+                            Tìm kiếm
+                        </button>
+                    }
+
+                </div>
+                @if (Session["DangNhap"] != null)
+                {
+                    <button class="btn header-navbar__login-btn" id="btn-login">
+                        <span class="header-navbar__login--icon">
+                            <i class="fa fa-sign-in" aria-hidden="true"></i>
+                        </span>
+                        @Session["DangNhap"].ToString()
+                    </button>
+                }
+                else
+                {
+                    <a href="~/Home/DangNhap" class="btn header-navbar__login-btn" id="btn-login" style="text-decoration: none; color: black">
+                        <span class="header-navbar__login--icon">
+                            <i class="fa fa-sign-in" aria-hidden="true"></i>
+                        </span>
+                        Đăng nhập
+                    </a>
+                }
+
+                @*< -- Giỏ hàng -->*@
+
+                @*<div class="product-heading-navbar__cart">
+            <span>
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            </span>
+            <!-- <ul class="cart-list">
+            <li class="cart-item"></li>
+        </ul> -->
+            <div class="header__cart--list">
+                <img src="~/assets/Images/empty_state.png" alt="" class="header__cart--list-no-cart-img" />
+                <span class="header__cart--list-no-cart-msg">Chưa có sản phẩm</span>
+                <h4 class="header__cart--heading">
+                    Sản phẩm đã thêm
+                </h4>
+                <ul class="header__cart--list-item">
+                    <!-- cart item -->
+                    <li class="header__cart--item">
+                        <img src="https://cf.shopee.vn/file/24b194a695ea59d384768b7b471d563f_tn" alt="" />
+                        <div class="header__cart--item-info">
+                            <div class="header__cart--item-head">
+                                <h5 class="header__cart--item-name">
+                                    Áo phông nam nữ tay lỡ form rộng, Áo thun tay lỡ unisex, mẫu áo phông mới nhất A53 Áo phông nam nữ tay lỡ form rộng, Áo thun tay lỡ unisex, mẫu áo phông mới nhất A53
+                                </h5>
+                                <div class="heder__cart--item-price-wrap">
+                                    <span class="header__cart--item-price">2.000.000</span>
+                                    <span class="header__cart--item-multiply">x</span>
+                                    <span class="header__cart--item-quantity">2</span>
+                                </div>
+                            </div>
+                            <div class="header__cart--item-body">
+                                <span class="header__cart--item-desc">Phân loại: bạc</span>
+                                <span class="header__cart--item-remove">Xóa</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="header__cart--item">
+                        <img src="https://cf.shopee.vn/file/6cb7e633f8b63757463b676bd19a50e4_tn" alt="" />
+                        <div class="header__cart--item-info">
+                            <div class="header__cart--item-head">
+                                <h5 class="header__cart--item-name">Bông Tẩy Trang 3 Lớp Cotton Pads</h5>
+                                <div class="heder__cart--item-price-wrap">
+                                    <span class="header__cart--item-price">2.000.000</span>
+                                    <span class="header__cart--item-multiply">x</span>
+                                    <span class="header__cart--item-quantity">2</span>
+                                </div>
+                            </div>
+                            <div class="header__cart--item-body">
+                                <span class="header__cart--item-desc">Phân loại: bạc</span>
+                                <span class="header__cart--item-remove">Xóa</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="header__cart--item">
+                        <img src="https://cf.shopee.vn/file/75ea42f9eca124e9cb3cde744c060e4d_tn" alt="" />
+                        <div class="header__cart--item-info">
+                            <div class="header__cart--item-head">
+                                <h5 class="header__cart--item-name">Cái nồi</h5>
+                                <div class="heder__cart--item-price-wrap">
+                                    <span class="header__cart--item-price">2.000.000</span>
+                                    <span class="header__cart--item-multiply">x</span>
+                                    <span class="header__cart--item-quantity">2</span>
+                                </div>
+                            </div>
+                            <div class="header__cart--item-body">
+                                <span class="header__cart--item-desc">Phân loại: bạc</span>
+                                <span class="header__cart--item-remove">Xóa</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="header__cart--item">
+                        <img src="https://cf.shopee.vn/file/24b194a695ea59d384768b7b471d563f_tn" alt="" />
+                        <div class="header__cart--item-info">
+                            <div class="header__cart--item-head">
+                                <h5 class="header__cart--item-name">Cái nồi</h5>
+                                <div class="heder__cart--item-price-wrap">
+                                    <span class="header__cart--item-price">2.000.000</span>
+                                    <span class="header__cart--item-multiply">x</span>
+                                    <span class="header__cart--item-quantity">2</span>
+                                </div>
+                            </div>
+                            <div class="header__cart--item-body">
+                                <span class="header__cart--item-desc">Phân loại: bạc</span>
+                                <span class="header__cart--item-remove">Xóa</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="header__cart--item">
+                        <img src="https://cf.shopee.vn/file/6cb7e633f8b63757463b676bd19a50e4_tn" alt="" />
+                        <div class="header__cart--item-info">
+                            <div class="header__cart--item-head">
+                                <h5 class="header__cart--item-name">Bông Tẩy Trang 3 Lớp Cotton Pads</h5>
+                                <div class="heder__cart--item-price-wrap">
+                                    <span class="header__cart--item-price">2.000.000</span>
+                                    <span class="header__cart--item-multiply">x</span>
+                                    <span class="header__cart--item-quantity">2</span>
+                                </div>
+                            </div>
+                            <div class="header__cart--item-body">
+                                <span class="header__cart--item-desc">Phân loại: bạc</span>
+                                <span class="header__cart--item-remove">Xóa</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="header__cart--item">
+                        <img src="https://cf.shopee.vn/file/75ea42f9eca124e9cb3cde744c060e4d_tn" alt="" />
+                        <div class="header__cart--item-info">
+                            <div class="header__cart--item-head">
+                                <h5 class="header__cart--item-name">Cái nồi</h5>
+                                <div class="heder__cart--item-price-wrap">
+                                    <span class="header__cart--item-price">2.000.000</span>
+                                    <span class="header__cart--item-multiply">x</span>
+                                    <span class="header__cart--item-quantity">2</span>
+                                </div>
+                            </div>
+                            <div class="header__cart--item-body">
+                                <span class="header__cart--item-desc">Phân loại: bạc</span>
+                                <span class="header__cart--item-remove">Xóa</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!-- <div class="clearfix"></div> -->
+                <a href="#" class="header__cart--view-cart btn btn-primary">Xem giỏi hàng</a>
+            </div>
+        </div>*@
+                @Html.Action("GioHangPartial", "GioHang")
+            </div>
+        </div>
+        @* Giới thiệu các chính sách *@
+        <div class="prodct-navbar">
+            <ul class="product-navbar__list wide grid">
+                <li class="product-navbar__item">
+                    <a href="#" class="product-navbar__link">
+                        Danh mục
+                        <span style="margin-left: 10px;"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+                    </a>
+                </li>
+                <li class="product-navbar__item">
+                    <a href="#" class="product-navbar__link">combo siêu hời</a>
+                </li>
+                <li class="product-navbar__item">
+                    <a href="#" class="product-navbar__link">Sản phẩm bán chạy</a>
+                </li>
+                <li class="product-navbar__item">
+                    <a href="#" class="product-navbar__link">Sản phẩm mới</a>
+                </li>
+                <li class="product-navbar__item">
+                    <a href="#" class="product-navbar__link">Thương hiệu độc quyền</a>
+                </li>
+                <li class="product-navbar__item">
+                    <a href="#" class="product-navbar__link">Giới thiệu</a>
+                </li>
+                <li class="product-navbar__item">
+                    <a href="#" class="product-navbar__link">Liên hệ</a>
+                </li>
+
+            </ul>
+        </div>
+        @RenderBody()
+@* footer *@
+        <div class="footer">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-4 m-12 c-12 footer-item">
+                        <div class="footer-item__heading">CÔNG TY CỔ PHẦN TMDV 30SHINE</div>
+                        <div class="footer-item__detail">
+                            <ul class="footer-item__detail-list">
+                                <li class="footer-item__detail-item">
+                                    82 Trần Đại Nghĩa, P. Đồng Tâm, Q. Hai Bà Trưng, HN
+                                </li>
+                                <li class="footer-item__detail-item">
+                                    Số giấy chứng nhận kinh doanh: 010.7467.693
+                                </li>
+                                <li class="footer-item__detail-item">
+                                    Ngày cấp: 08/06/2016
+                                </li>
+                                <li class="footer-item__detail-item">
+                                    <a href="#" class="footer-item__detail-link">Chính sách bảo mật thông tin</a>
+                                </li>
+                                <li class="footer-item__detail-item">
+                                    <a href="#" class="footer-item__detail-link">Liên hệ quảng cáo 30shine</a>
+                                </li>
+
+                                <li class="footer-item__detail-item">
+                                    <div class="footer-logo">
+                                        <img src="~/assets/Images/congthuongicon.png" alt="#">
+                                        <img src="~/assets/Images/dmca_protected_26_120.png" alt="#">
+                                    </div>
+                                </li>
+                                <li class="footer-item__detail-item">
+                                    Chấp nhận thanh toán
+                                </li>
+                                <li class="footer-item__detail-item">
+                                    <div class="footer-logo">
+                                        <img src="~/assets/Images/visa.a04c8520.svg" alt="#">
+                                        <img src="~/assets/Images/mastercard.1c44b057.svg" alt="#">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-12 c-12">
+                        <div class="footer-item__heading">GIỜ PHỤC VỤ</div>
+                        <div class="footer-item__detail">
+                            <ul class="footer-item__detail-list">
+                                <li class="footer-item__detail-item">
+                                    Thứ 2 đến thứ 6: 8h00 - 21h00
+                                </li>
+                                <li class="footer-item__detail-item">
+                                    Thứ 7, chủ nhật: 7h30 - 21h00
+                                </li>
+                                <li class="footer-item__detail-item layout-20">
+                                    <div class="footer-hotline">
+                                        <a href="tel:0337122712" class="footer-hotline__text">
+                                            <span class="footer-hotline__icon">
+                                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                            </span>
+                                            1800.28.28.30 (Miễn phí)
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="col l-4 m-12 c-12">
+                        <div class="footer-item__heading">TẢI ỨNG DỤNG CỦA 30SHINE</div>
+                        <div class="footer-item__detail">
+                            <ul class="footer-item__detail-list">
+                                <li class="footer-item__detail-item">
+                                    Trải nghiệm đặt lịch nhanh chóng và
+                                    nhiều tiện ích khác với ứng dụng 30Shine.
+                                </li>
+                                <li class="footer-item__detail-item layout-20">
+                                    <div class="footer-logo">
+                                        <img src="~/assets/Images/download.png" alt="#">
+                                        <img src="~/assets/Images/download (1).png" alt="#">
+                                    </div>
+                                </li>
+                                <li class="footer-item__detail-item">
+                                    <div class="footer-item__heading">tham gia cộng đồng</div>
+                                </li>
+                                <li class="footer-item__detail-item">
+                                    Cùng 2.5tr thành viên 30shine
+                                </li>
+                                <li class="footer-item__detail-item">
+                                    <ul class="footer-item__detail-icons-list">
+                                        <li class="footer-item__detail-icons-item">
+                                            <a href="#" class="footer-item__detail-icons-link">
+                                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li class="footer-item__detail-icons-item">
+                                            <a href="#" class="footer-item__detail-icons-link">
+                                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li class="footer-item__detail-icons-item">
+                                            <a href="#" class="footer-item__detail-icons-link">
+                                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li class="foo.ter-item__detail-icons-item">
+                                            <a href="#" class="footer-item__detail-icons-link">
+                                                <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

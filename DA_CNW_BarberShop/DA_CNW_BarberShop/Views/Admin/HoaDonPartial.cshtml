@@ -1,0 +1,26 @@
+﻿
+@model List<DA_CNW_BarberShop.Models.tblReceipt>
+
+<div class="table-responsive">
+    <table class="table align-items-center table-flush">
+        <thead class="thead-light">
+            <tr>
+                <th>Mã hóa đơn</th>
+                <th>Mã khách hàng</th>
+                <th>Mã nhân viên</th>
+                <th>Ngày lập</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td><a href="#">@item.PK_iReceiptID</a></td>
+                    <td>@item.FK_iCustomID</td>
+                    <td><span class="badge badge-success">@item.FK_iStaffID</span></td>
+                    <td><a href="#" class="btn btn-sm btn-primary">@item.dTimeCreate</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

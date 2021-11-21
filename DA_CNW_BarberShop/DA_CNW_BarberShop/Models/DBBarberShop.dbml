@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DB_BARBER_SHOP" Class="DBBarberShopDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=VanHien;Initial Catalog=DB_BARBER_SHOP;User ID=SA" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DB_BARBER_SHOPConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblBookAdvance" Member="tblBookAdvances">
+    <Type Name="tblBookAdvance">
+      <Column Name="PK_iBookAdvanceID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FK_iStaffID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FK_iCustomerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FK_iStoreID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dCreateTime" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="dExecutionTime" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="sNote" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="tblBookAdvance_tblDetailBookAdvance" Member="tblDetailBookAdvances" ThisKey="PK_iBookAdvanceID" OtherKey="FK_iBookAdvanceID" Type="tblDetailBookAdvance" />
+      <Association Name="tblCustomer_tblBookAdvance" Member="tblCustomer" ThisKey="FK_iCustomerID" OtherKey="PK_iCustomerID" Type="tblCustomer" IsForeignKey="true" />
+      <Association Name="tblStaff_tblBookAdvance" Member="tblStaff" ThisKey="FK_iStaffID" OtherKey="PK_iStaffID" Type="tblStaff" IsForeignKey="true" />
+      <Association Name="tblStore_tblBookAdvance" Member="tblStore" ThisKey="FK_iStoreID" OtherKey="PK_iStoreID" Type="tblStore" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblTypeService" Member="tblTypeServices">
+    <Type Name="tblTypeService">
+      <Column Name="PK_sTypeServiceID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="sNameTypeService" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="sDesciption" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Association Name="tblTypeService_tblService" Member="tblServices" ThisKey="PK_sTypeServiceID" OtherKey="FK_sTypeServiceID" Type="tblService" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblCart" Member="tblCarts">
+    <Type Name="tblCart">
+      <Column Name="PK_iCartID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FK_iCustomID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="tblCart_tblCartDetail" Member="tblCartDetails" ThisKey="PK_iCartID" OtherKey="FK_iCartID" Type="tblCartDetail" />
+      <Association Name="tblCustomer_tblCart" Member="tblCustomer" ThisKey="FK_iCustomID" OtherKey="PK_iCustomerID" Type="tblCustomer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblCartDetail" Member="tblCartDetails">
+    <Type Name="tblCartDetail">
+      <Column Name="PK_iCartDetailID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FK_iCartID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FK_iProductID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dDateAddCart" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="iQuantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="tblCart_tblCartDetail" Member="tblCart" ThisKey="FK_iCartID" OtherKey="PK_iCartID" Type="tblCart" IsForeignKey="true" />
+      <Association Name="tblProduct_tblCartDetail" Member="tblProduct" ThisKey="FK_iProductID" OtherKey="PK_iProductID" Type="tblProduct" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblCategoryPost" Member="tblCategoryPosts">
+    <Type Name="tblCategoryPost">
+      <Column Name="PK_sCategoryPostID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FK_sGroupPostID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sCategoryName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="sDescription" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Association Name="tblCategoryPost_tblPost" Member="tblPosts" ThisKey="PK_sCategoryPostID" OtherKey="FK_sCategoryPostID" Type="tblPost" />
+      <Association Name="tblGroupPost_tblCategoryPost" Member="tblGroupPost" ThisKey="FK_sGroupPostID" OtherKey="PK_sGroupPostID" Type="tblGroupPost" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblCategoryProduct" Member="tblCategoryProducts">
+    <Type Name="tblCategoryProduct">
+      <Column Name="PK_sCategoryProductID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FK_sGroupProductID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sCategoryName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="sDescription" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Association Name="tblCategoryProduct_tblProduct" Member="tblProducts" ThisKey="PK_sCategoryProductID" OtherKey="FK_sCategoryProductID" Type="tblProduct" />
+      <Association Name="tblGroupProduct_tblCategoryProduct" Member="tblGroupProduct" ThisKey="FK_sGroupProductID" OtherKey="PK_sGroupProductID" Type="tblGroupProduct" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblCustomer" Member="tblCustomers">
+    <Type Name="tblCustomer">
+      <Column Name="PK_iCustomerID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sNameCustomer" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sPhoneNumber" Type="System.String" DbType="Char(11) NOT NULL" CanBeNull="false" />
+      <Column Name="sGmail" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sAddress" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="dBrithDay" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="sPassword" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="iCoin" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sSex" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="sStatus" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="tblCustomer_tblBookAdvance" Member="tblBookAdvances" ThisKey="PK_iCustomerID" OtherKey="FK_iCustomerID" Type="tblBookAdvance" />
+      <Association Name="tblCustomer_tblCart" Member="tblCarts" ThisKey="PK_iCustomerID" OtherKey="FK_iCustomID" Type="tblCart" />
+      <Association Name="tblCustomer_tblOrderProduct" Member="tblOrderProducts" ThisKey="PK_iCustomerID" OtherKey="FK_iCustomerID" Type="tblOrderProduct" />
+      <Association Name="tblCustomer_tblReceipt" Member="tblReceipts" ThisKey="PK_iCustomerID" OtherKey="FK_iCustomID" Type="tblReceipt" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblDeatailOrder" Member="tblDeatailOrders">
+    <Type Name="tblDeatailOrder">
+      <Column Name="PK_iDetailOrderID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FK_iOrderID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FK_iProductID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="iSoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tblOrderProduct_tblDeatailOrder" Member="tblOrderProduct" ThisKey="FK_iOrderID" OtherKey="PK_iOrderID" Type="tblOrderProduct" IsForeignKey="true" />
+      <Association Name="tblProduct_tblDeatailOrder" Member="tblProduct" ThisKey="FK_iProductID" OtherKey="PK_iProductID" Type="tblProduct" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblDetailBookAdvance" Member="tblDetailBookAdvances">
+    <Type Name="tblDetailBookAdvance">
+      <Column Name="PK_iDetailBookAdvanceID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FK_iBookAdvanceID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FK_iServiceID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tblBookAdvance_tblDetailBookAdvance" Member="tblBookAdvance" ThisKey="FK_iBookAdvanceID" OtherKey="PK_iBookAdvanceID" Type="tblBookAdvance" IsForeignKey="true" />
+      <Association Name="tblService_tblDetailBookAdvance" Member="tblService" ThisKey="FK_iServiceID" OtherKey="PK_iServiceID" Type="tblService" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblDiscount" Member="tblDiscounts">
+    <Type Name="tblDiscount">
+      <Column Name="PK_sDiscountID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="sNameDiscount" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="fRatioDiscount" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="dStartDiscount" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="dEndDiscount" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="sDescription" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="bStatus" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="tblDiscount_tblProduct" Member="tblProducts" ThisKey="PK_sDiscountID" OtherKey="FK_sDiscountID" Type="tblProduct" />
+      <Association Name="tblDiscount_tblService" Member="tblServices" ThisKey="PK_sDiscountID" OtherKey="FK_sDiscountID" Type="tblService" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblGroupPosts" Member="tblGroupPosts">
+    <Type Name="tblGroupPost">
+      <Column Name="PK_sGroupPostID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="sGroupName" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="sDescription" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="tblGroupPost_tblCategoryPost" Member="tblCategoryPosts" ThisKey="PK_sGroupPostID" OtherKey="FK_sGroupPostID" Type="tblCategoryPost" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblGroupProduct" Member="tblGroupProducts">
+    <Type Name="tblGroupProduct">
+      <Column Name="PK_sGroupProductID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="sGroupName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="sDescription" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="tblGroupProduct_tblCategoryProduct" Member="tblCategoryProducts" ThisKey="PK_sGroupProductID" OtherKey="FK_sGroupProductID" Type="tblCategoryProduct" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblImage" Member="tblImages">
+    <Type Name="tblImage">
+      <Column Name="PK_iImageID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FK_iProductID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FK_iServiceID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FK_iPostID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FK_iComboServiceID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sImage" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Association Name="tblPost_tblImage" Member="tblPost" ThisKey="FK_iPostID" OtherKey="PK_iPostID" Type="tblPost" IsForeignKey="true" />
+      <Association Name="tblProduct_tblImage" Member="tblProduct" ThisKey="FK_iProductID" OtherKey="PK_iProductID" Type="tblProduct" IsForeignKey="true" />
+      <Association Name="tblService_tblImage" Member="tblService" ThisKey="FK_iServiceID" OtherKey="PK_iServiceID" Type="tblService" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblOrderProduct" Member="tblOrderProducts">
+    <Type Name="tblOrderProduct">
+      <Column Name="PK_iOrderID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FK_iCustomerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dNgayDatHang" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="dNgayGiaoHang" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="sAddressDelivery" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="sNote" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Association Name="tblOrderProduct_tblDeatailOrder" Member="tblDeatailOrders" ThisKey="PK_iOrderID" OtherKey="FK_iOrderID" Type="tblDeatailOrder" />
+      <Association Name="tblCustomer_tblOrderProduct" Member="tblCustomer" ThisKey="FK_iCustomerID" OtherKey="PK_iCustomerID" Type="tblCustomer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblPay" Member="tblPays">
+    <Type Name="tblPay">
+      <Column Name="PK_iPayID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FK_iReceiptID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FK_iPaymentsID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fTotalMoney" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dCompletionTime" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="tblPayment_tblPay" Member="tblPayment" ThisKey="FK_iPaymentsID" OtherKey="PK_iPaymentsID" Type="tblPayment" IsForeignKey="true" />
+      <Association Name="tblReceipt_tblPay" Member="tblReceipt" ThisKey="FK_iReceiptID" OtherKey="PK_iReceiptID" Type="tblReceipt" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblPayments" Member="tblPayments">
+    <Type Name="tblPayment">
+      <Column Name="PK_iPaymentsID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sPaymentName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sDescription" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="bStatus" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="tblPayment_tblPay" Member="tblPays" ThisKey="PK_iPaymentsID" OtherKey="FK_iPaymentsID" Type="tblPay" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblPosts" Member="tblPosts">
+    <Type Name="tblPost">
+      <Column Name="PK_iPostID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FK_sCategoryPostID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FK_iStaffID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sPostName" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="sDesciption" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="sImage" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="dCreationTime" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="bStatus" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="tblPost_tblImage" Member="tblImages" ThisKey="PK_iPostID" OtherKey="FK_iPostID" Type="tblImage" />
+      <Association Name="tblCategoryPost_tblPost" Member="tblCategoryPost" ThisKey="FK_sCategoryPostID" OtherKey="PK_sCategoryPostID" Type="tblCategoryPost" IsForeignKey="true" />
+      <Association Name="tblStaff_tblPost" Member="tblStaff" ThisKey="FK_iStaffID" OtherKey="PK_iStaffID" Type="tblStaff" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblProduct" Member="tblProducts">
+    <Type Name="tblProduct">
+      <Column Name="PK_iProductID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FK_sCategoryProductID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FK_sDiscountID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sProductName" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="sDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="fPrice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="sStar" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sImage" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="iQuantityInStock" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="iViewNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="bStatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tblProduct_tblCartDetail" Member="tblCartDetails" ThisKey="PK_iProductID" OtherKey="FK_iProductID" Type="tblCartDetail" />
+      <Association Name="tblProduct_tblDeatailOrder" Member="tblDeatailOrders" ThisKey="PK_iProductID" OtherKey="FK_iProductID" Type="tblDeatailOrder" />
+      <Association Name="tblProduct_tblImage" Member="tblImages" ThisKey="PK_iProductID" OtherKey="FK_iProductID" Type="tblImage" />
+      <Association Name="tblProduct_tblReceiptDetail" Member="tblReceiptDetails" ThisKey="PK_iProductID" OtherKey="FK_iProductID" Type="tblReceiptDetail" />
+      <Association Name="tblCategoryProduct_tblProduct" Member="tblCategoryProduct" ThisKey="FK_sCategoryProductID" OtherKey="PK_sCategoryProductID" Type="tblCategoryProduct" IsForeignKey="true" />
+      <Association Name="tblDiscount_tblProduct" Member="tblDiscount" ThisKey="FK_sDiscountID" OtherKey="PK_sDiscountID" Type="tblDiscount" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblReceipt" Member="tblReceipts">
+    <Type Name="tblReceipt">
+      <Column Name="PK_iReceiptID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FK_iCustomID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FK_iStaffID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dTimeCreate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="tblReceipt_tblPay" Member="tblPays" ThisKey="PK_iReceiptID" OtherKey="FK_iReceiptID" Type="tblPay" />
+      <Association Name="tblCustomer_tblReceipt" Member="tblCustomer" ThisKey="FK_iCustomID" OtherKey="PK_iCustomerID" Type="tblCustomer" IsForeignKey="true" />
+      <Association Name="tblStaff_tblReceipt" Member="tblStaff" ThisKey="FK_iStaffID" OtherKey="PK_iStaffID" Type="tblStaff" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblReceiptDetail" Member="tblReceiptDetails">
+    <Type Name="tblReceiptDetail">
+      <Column Name="PK_iReceiptDetailID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FK_iProductID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FK_iServiceID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="iQuantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="tblProduct_tblReceiptDetail" Member="tblProduct" ThisKey="FK_iProductID" OtherKey="PK_iProductID" Type="tblProduct" IsForeignKey="true" />
+      <Association Name="tblService_tblReceiptDetail" Member="tblService" ThisKey="FK_iServiceID" OtherKey="PK_iServiceID" Type="tblService" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblService" Member="tblServices">
+    <Type Name="tblService">
+      <Column Name="PK_iServiceID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FK_sDiscountID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FK_sTypeServiceID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sNameService" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="sDescription" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="fPrice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="sImage" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="bStatus" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="tblService_tblDetailBookAdvance" Member="tblDetailBookAdvances" ThisKey="PK_iServiceID" OtherKey="FK_iServiceID" Type="tblDetailBookAdvance" />
+      <Association Name="tblService_tblImage" Member="tblImages" ThisKey="PK_iServiceID" OtherKey="FK_iServiceID" Type="tblImage" />
+      <Association Name="tblService_tblReceiptDetail" Member="tblReceiptDetails" ThisKey="PK_iServiceID" OtherKey="FK_iServiceID" Type="tblReceiptDetail" />
+      <Association Name="tblDiscount_tblService" Member="tblDiscount" ThisKey="FK_sDiscountID" OtherKey="PK_sDiscountID" Type="tblDiscount" IsForeignKey="true" />
+      <Association Name="tblTypeService_tblService" Member="tblTypeService" ThisKey="FK_sTypeServiceID" OtherKey="PK_sTypeServiceID" Type="tblTypeService" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblStaff" Member="tblStaffs">
+    <Type Name="tblStaff">
+      <Column Name="PK_iStaffID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sNameStaff" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="dBirthday" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="sPhone" Type="System.String" DbType="Char(11)" CanBeNull="true" />
+      <Column Name="sGmail" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="sSex" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="sPassword" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sPosition" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sSalary" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dDayWork" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="sStatus" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="tblStaff_tblBookAdvance" Member="tblBookAdvances" ThisKey="PK_iStaffID" OtherKey="FK_iStaffID" Type="tblBookAdvance" />
+      <Association Name="tblStaff_tblPost" Member="tblPosts" ThisKey="PK_iStaffID" OtherKey="FK_iStaffID" Type="tblPost" />
+      <Association Name="tblStaff_tblReceipt" Member="tblReceipts" ThisKey="PK_iStaffID" OtherKey="FK_iStaffID" Type="tblReceipt" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblStore" Member="tblStores">
+    <Type Name="tblStore">
+      <Column Name="PK_iStoreID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sDescription" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="dOpenStore" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="dCloseStore" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="sAddress" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="tblStore_tblBookAdvance" Member="tblBookAdvances" ThisKey="PK_iStoreID" OtherKey="FK_iStoreID" Type="tblBookAdvance" />
+    </Type>
+  </Table>
+</Database>

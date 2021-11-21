@@ -1,0 +1,39 @@
+﻿@model List<DA_CNW_BarberShop.Models.tblService>
+
+<div class="grid wide">
+    <div class="content-service layout">
+        <div class="head">
+            <div class="head__title">
+                <div class="head__title--main">Trải nghiệm dịch vụ</div>
+                <div class="head__title--sub">Thư giãn 30 phút và bạn sẽ tỏa sáng</div>
+            </div>
+            <a href="#" class="head__view-all">
+                <span class="col c-0">Xem tất cả</span>
+                <span class="head__view-all--icon">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </span>
+            </a>
+        </div>
+        <a href="#" class="content-banner">
+            <img src="~/assets/Images/banner-dich-vu.jpg" alt="#" class="content-banner__img">
+        </a>
+        <div class="row layout">
+            @foreach (var item in Model)
+            {
+                <div class="col l-3 m-12 c-12 ">
+                    <a href="#" class="list__item">
+                        <div class="list__item-media">
+                            <img src="~/assets/Images/img-service/@item.sImage"
+                                 alt="" class="list__item-media-img">
+                        </div>
+                        <div class="list__item-text" style="overflow: hidden">
+                            <div class="list__item-text--main">@item.sNameService</div>
+                            <div class="list__item-text--sub limits-text-2">@item.sDescription</div>
+                        </div>
+                    </a>
+
+                </div>
+            }
+        </div>
+    </div>
+</div>

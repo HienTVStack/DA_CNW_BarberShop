@@ -1,0 +1,156 @@
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\DA_CNW_BarberShop.dll.config
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\DA_CNW_BarberShop.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\DA_CNW_BarberShop.pdb
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\csc.exe
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\csc.exe.config
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\csc.rsp
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\csi.exe
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\csi.exe.config
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\csi.rsp
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.AppContext.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.Console.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.IO.Compression.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.IO.Pipes.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.Security.Claims.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.ValueTuple.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.Xml.XPath.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\vbc.exe
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\vbc.exe.config
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\vbc.rsp
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\VBCSCompiler.exe
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\Antlr3.Runtime.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\Newtonsoft.Json.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\System.Web.Helpers.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\System.Web.Mvc.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\System.Web.Optimization.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\System.Web.Razor.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\System.Web.WebPages.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\System.Web.WebPages.Razor.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\WebGrease.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\System.Web.Helpers.xml
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\System.Web.Mvc.xml
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\System.Web.Optimization.xml
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\System.Web.Razor.xml
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\System.Web.WebPages.xml
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\System.Web.WebPages.Razor.xml
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\Newtonsoft.Json.xml
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\Antlr3.Runtime.pdb
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\obj\Debug\DA_CNW_BarberShop.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\obj\Debug\DA_CNW_BarberShop.csproj.CopyComplete
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\obj\Debug\DA_CNW_BarberShop.dll
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\obj\Debug\DA_CNW_BarberShop.pdb
+C:\Users\ADMIN\Desktop\DA_CNW_BarberShop\DA_CNW_BarberShop\obj\Debug\DA_CNW_BarberShop.csprojAssemblyReference.cache
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\DA_CNW_BarberShop.dll.config
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\DA_CNW_BarberShop.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\DA_CNW_BarberShop.pdb
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\csc.exe
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\csc.exe.config
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\csc.rsp
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\csi.exe
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\csi.exe.config
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\csi.rsp
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.AppContext.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.Console.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.IO.Compression.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.IO.Pipes.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.Security.Claims.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.ValueTuple.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.Xml.XPath.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\vbc.exe
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\vbc.exe.config
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\vbc.rsp
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\VBCSCompiler.exe
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\Antlr3.Runtime.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\Newtonsoft.Json.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\PagedList.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\PagedList.Mvc.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\System.Web.Helpers.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\System.Web.Mvc.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\System.Web.Optimization.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\System.Web.Razor.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\System.Web.WebPages.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\System.Web.WebPages.Razor.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\WebGrease.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\PagedList.xml
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\PagedList.Mvc.xml
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\System.Web.Helpers.xml
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\System.Web.Mvc.xml
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\System.Web.Optimization.xml
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\System.Web.Razor.xml
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\System.Web.WebPages.xml
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\System.Web.WebPages.Razor.xml
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\Newtonsoft.Json.xml
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\Antlr3.Runtime.pdb
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\obj\Debug\DA_CNW_BarberShop.csprojAssemblyReference.cache
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\obj\Debug\DA_CNW_BarberShop.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\obj\Debug\DA_CNW_BarberShop.csproj.CopyComplete
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\obj\Debug\DA_CNW_BarberShop.dll
+C:\Users\ADMIN\Desktop\New folder\DA_CNW_BarberShop\DA_CNW_BarberShop\obj\Debug\DA_CNW_BarberShop.pdb

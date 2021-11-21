@@ -1,0 +1,301 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Trang chủ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="~/assets/Css/reset.css" rel="stylesheet">
+    <link href="~/assets/Css/grid.css" rel="stylesheet">
+    <link href="~/assets/Css/abstract.css" rel="stylesheet">
+    <link href="~/assets/Css/abstract.css" rel="stylesheet" />
+    <link href="~/assets/Css/button.css" rel="stylesheet">
+    <link href="~/assets/Css/style.css" rel="stylesheet">
+    <link href="~/assets/Css/model-login.css" rel="stylesheet">
+    <link href="~/assets/Css/toast-mess.css" rel="stylesheet">
+    <link href="~/assets/Css/media.css" rel="stylesheet">
+    <link href="~/assets/Css/product.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="app">
+        <div id="toast"></div>
+        <div class="header">
+            <div class="grid wide">
+                <div class="header-navbar">
+                    <a class="header-navbar__logo">
+                        <img src="~/assets/Images/log-30shine-white.9945e644.jpg"
+                             alt="" class="header-navbar__logo-img">
+                    </a>
+                    <div class="header-navbar__menu col c-0 m-0">
+                        <ul class="header-navbar__list">
+                            <li class="header-navbar__item"><a href="#" class="header-navbar__link">Trải nghiệm dịch vụ</a></li>
+                            <!-- <li class="header-navbar__item"><a href="#" class="header-navbar__link">Hành trình tỏa sáng</a></li> -->
+                            <li class="header-navbar__item"><a href="#" class="header-navbar__link">Khám phá kiểu tóc</a></li>
+                            <li class="header-navbar__item">
+                                @*<a href="Products/listProduct" class="header-navbar__link">30shine shop</a>*@
+                                @*@Html.ActionLink("30shine shop", "listProduct", "Products", new { @class = "header-navbar__link" })*@
+                                <a href="~/Products/listProduct" class="header-navbar__link">30shine shop</a>
+                            </li>
+                            <li class="header-navbar__item"><a href="#" class="header-navbar__link">Tìm 30shine gần nhất</a></li>
+                            <li class="header-navbar__item"><a href="#" class="header-navbar__link">Tuyển dụng</a></li>
+                        </ul>
+                    </div>
+                    <div class="header-navbar__login">
+                        <button class="btn header-navbar__login-btn" id="btn-login">
+                            <span class="header-navbar__login--icon">
+                                <i class="fa fa-sign-in" aria-hidden="true"></i>
+                            </span>
+                            Đăng nhập
+                        </button>
+                        <div class="header-navbar__menu-icon col l-0" id="open-menu-mobile">
+                            <i class="fa fa-bars" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-nav__down col l-0" id="menu-down">
+                    <div class="header-nav__close" id="close-menu-mobile">
+                        <span class="header-nav__close-icon">
+                            <i class="fa fa-window-close" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <div class="nav__down-heading">
+                        <img src="~/assets/Images/log-30shine-white.9945e644.jpg" alt=""
+                             class="nav__down-heading__logo">
+                    </div>
+                    <ul class="header-nav__list">
+                        <li class="header-nav__item">
+                            <a href="#" class="header-nav__link">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="header-nav__link--icon">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                    <div class="header-nav__link--text">Trải nghiệm dịch vụ</div>
+                                </div>
+
+                                <span class="header-nav__link--icon">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="header-nav__item">
+                            <a href="#" class="header-nav__link">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="header-nav__link--icon">
+                                        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                                    </span>
+                                    <div class="header-nav__link--text">Hành trình tỏa sáng</div>
+                                </div>
+
+                                <span class="header-nav__link--icon">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="header-nav__item">
+                            <a href="#" class="header-nav__link">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="header-nav__link--icon">
+                                        <i class="fa fa-cc-discover" aria-hidden="true"></i>
+                                    </span>
+                                    <div class="header-nav__link--text">Khám phá kiểu tóc</div>
+                                </div>
+
+                                <span class="header-nav__link--icon">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="header-nav__item">
+                            <a href="#" class="header-nav__link">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="header-nav__link--icon">
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    </span>
+                                    <div class="header-nav__link--text">30shine shop</div>
+                                </div>
+
+                                <span class="header-nav__link--icon">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="header-nav__item">
+                            <a href="#" class="header-nav__link">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="header-nav__link--icon">
+                                        <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                    </span>
+                                    <div class="header-nav__link--text">Tuyển dụng</div>
+                                </div>
+
+                                <span class="header-nav__link--icon">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="header-nav__item">
+                            <a href="#" class="header-nav__link">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="header-nav__link--icon">
+                                        <i class="fa fa-circle-o-notch" aria-hidden="true"></i>
+                                    </span>
+                                    <div class="header-nav__link--text">Vòng xoay may mắn</div>
+                                </div>
+
+                                <span class="header-nav__link--icon">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- setup banner -->
+
+        @RenderBody();
+        <div class="footer">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-4 m-12 c-12 footer-item">
+                        <div class="footer-item__heading">CÔNG TY CỔ PHẦN TMDV 30SHINE</div>
+                        <div class="footer-item__detail">
+                            <ul class="footer-item__detail-list">
+                                <li class="footer-item__detail-item">
+                                    82 Trần Đại Nghĩa, P. Đồng Tâm, Q. Hai Bà Trưng, HN
+                                </li>
+                                <li class="footer-item__detail-item">
+                                    Số giấy chứng nhận kinh doanh: 010.7467.693
+                                </li>
+                                <li class="footer-item__detail-item">
+                                    Ngày cấp: 08/06/2016
+                                </li>
+                                <li class="footer-item__detail-item">
+                                    <a href="#" class="footer-item__detail-link">Chính sách bảo mật thông tin</a>
+                                </li>
+                                <li class="footer-item__detail-item">
+                                    <a href="#" class="footer-item__detail-link">Liên hệ quảng cáo 30shine</a>
+                                </li>
+
+                                <li class="footer-item__detail-item">
+                                    <div class="footer-logo">
+                                        <img src="~/assets/Images/congthuongicon.png" alt="#">
+                                        <img src="~/assets/Images/dmca_protected_26_120.png" alt="#">
+                                    </div>
+                                </li>
+                                <li class="footer-item__detail-item">
+                                    Chấp nhận thanh toán
+                                </li>
+                                <li class="footer-item__detail-item">
+                                    <div class="footer-logo">
+                                        <img src="~/assets/Images/visa.a04c8520.svg" alt="#">
+                                        <img src="~/assets/Images/mastercard.1c44b057.svg" alt="#">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-12 c-12">
+                        <div class="footer-item__heading">GIỜ PHỤC VỤ</div>
+                        <div class="footer-item__detail">
+                            <ul class="footer-item__detail-list">
+                                <li class="footer-item__detail-item">
+                                    Thứ 2 đến thứ 6: 8h00 - 21h00
+                                </li>
+                                <li class="footer-item__detail-item">
+                                    Thứ 7, chủ nhật: 7h30 - 21h00
+                                </li>
+                                <li class="footer-item__detail-item layout-20">
+                                    <div class="footer-hotline">
+                                        <a href="tel:0337122712" class="footer-hotline__text">
+                                            <span class="footer-hotline__icon">
+                                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                            </span>
+                                            1800.28.28.30 (Miễn phí)
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="col l-4 m-12 c-12">
+                        <div class="footer-item__heading">TẢI ỨNG DỤNG CỦA 30SHINE</div>
+                        <div class="footer-item__detail">
+                            <ul class="footer-item__detail-list">
+                                <li class="footer-item__detail-item">
+                                    Trải nghiệm đặt lịch nhanh chóng và
+                                    nhiều tiện ích khác với ứng dụng 30Shine.
+                                </li>
+                                <li class="footer-item__detail-item layout-20">
+                                    <div class="footer-logo">
+                                        <img src="~/assets/Images/download.png" alt="#">
+                                        <img src="~/assets/Images/download (1).png" alt="#">
+                                    </div>
+                                </li>
+                                <li class="footer-item__detail-item">
+                                    <div class="footer-item__heading">tham gia cộng đồng</div>
+                                </li>
+                                <li class="footer-item__detail-item">
+                                    Cùng 2.5tr thành viên 30shine
+                                </li>
+                                <li class="footer-item__detail-item">
+                                    <ul class="footer-item__detail-icons-list">
+                                        <li class="footer-item__detail-icons-item">
+                                            <a href="#" class="footer-item__detail-icons-link">
+                                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li class="footer-item__detail-icons-item">
+                                            <a href="#" class="footer-item__detail-icons-link">
+                                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li class="footer-item__detail-icons-item">
+                                            <a href="#" class="footer-item__detail-icons-link">
+                                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li class="foo.ter-item__detail-icons-item">
+                                            <a href="#" class="footer-item__detail-icons-link">
+                                                <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="model" id="model">
+        <div class="model-login">
+            <div class="model-login__close" id="model-close">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </div>
+            <div class="model-login__heading">
+                <span class="model-login__heading--main">Đăng nhập</span>
+                <span class="model-login__heading--sub">Vui lòng nhập số điện thoại</span>
+            </div>
+            <div class="model-login__body">
+                <input type="text" class="model-login__body-input" placeholder="Ví dụ 033.xxx">
+            </div>
+            <div class="model-login__footer">
+                <button class="model-login__footer-btn btn" onclick="login()">Tiếp tục</button>
+            </div>
+        </div>
+    </div>
+    @*<script src="~/assets/JavaScript/main.js"></script>*@
+    <script src="~/assets/JavaScript/toast-message.js"></script>
+</body>
+</html>

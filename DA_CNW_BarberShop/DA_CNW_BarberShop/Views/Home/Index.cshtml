@@ -1,0 +1,243 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout_TrangChu.cshtml";
+}
+@* Banner đặt lịch *@
+<div id="banner" class="banner" style="background-image: url(../../assets/Images/211001_BANNER_WEB_30SHINE_w.jpg)">
+    <span class="banner-control banner-control--left" onclick="clickNextSlide()">
+        <i class="banner-control__icon fa fa-angle-left" aria-hidden="true"></i>
+    </span>
+    <div class="banner-model">
+        <div class="banner-model__heading">
+            <span class="banner-model__heading--main">ĐẶT LỊCH GIỮ CHỖ CHỈ 30 GIÂY</span>
+            <span class="banner-model__heading--sub">Cắt xong trả tiền, hủy lịch không sao</span>
+        </div>
+        @*@Html.BeginForm("showViewMain", "DatLich") {*@
+        <div class="banner-model__control">
+            <input type="text" id="txtInputPhone" name="sdt" class="banner-model__input" placeholder="Nhập SĐT để đặt lịch">
+            <button class="banner-model__button btn" id="banner-model__btn">đặt lịch ngay</button>
+            <button class="banner-model__button btn banner-model__button--mobile" id="banner-model__btn-mobile">đặt ngay</button>
+        </div>
+        @*}*@
+    </div>
+    <span class="banner-control banner-control--right" onclick="clickNextSlide()">
+        <i class="banner-control__icon fa fa-angle-right" aria-hidden="true"></i>
+    </span>
+</div>
+
+
+<div class="content">
+    @* Giới thiệu dịch vụ *@
+    @Html.Action("loadDichVu", "DichVu")
+    @* Những câu hỏi thường gặp *@
+    <div class="serve layout">
+        <div class="wide grid">
+            <div class="head">
+                <div class="head__title">
+                    <div class="head__title--main">Lắng nghe và tận tâm</div>
+                    <div class="head__title--sub">Thấu hiểu nhu cầu và hổ trợ nhiệt tình</div>
+                </div>
+                <a href="#" class="head__view-all">
+                    <span class="col c-0">Xem tất cả</span>
+                    <span class="head__view-all--icon">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </span>
+                </a>
+            </div>
+            <div class="row layout-20">
+                <div class="serve-content__list col l-3 m-12 c-12">
+                    <div class="blog__item">
+                        <div class="blog__media">
+                            <img src="~/assets/Images/lang-nghe-tan-tam-1.jpg" alt="#"
+                                 class="blog__media-img">
+                        </div>
+                        <span class="blog__text">Nói gì với stylist để có kiểu tóc ưng ý</span>
+                    </div>
+                </div>
+                <div class="serve-content__list col l-3 m-12 c-12">
+                    <div class="blog__item">
+                        <div class="blog__media">
+                            <img src="~/assets/Images/lang-nghe-tan-tam-3.jpg" alt="#"
+                                 class="blog__media-img">
+                        </div>
+                        <span class="blog__text">Những câu hỏi thường gặp</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @* Giới thiệu hành trình tỏa sáng *@
+    <div class="content-posts">
+        <div class="wide grid">
+            <div class="head">
+                <div class="head__title">
+                    <div class="head__title--main">Hành trình tỏa sáng</div>
+                    <div class="head__title--sub">Câu chuyện chân thực từ hàng chục ngàn khách hàng</div>
+                </div>
+                <a href="#" class="head__view-all">
+                    <span class="col c-0">Xem tất cả</span>
+                    <span class="head__view-all--icon">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </span>
+                </a>
+            </div>
+            <div class="row post__list layout-20">
+                <span class="banner-control banner-control--left" onclick="clickNextSlide()">
+                    <i class="banner-control__icon fa fa-angle-left" aria-hidden="true"></i>
+                </span>
+                <div class="col l-6 height-100">
+                    <a href="#" class="blog__item">
+                        <div class="blog__media">
+                            <img src="~/assets/Images/30shine-thay-doi-ngoai-hinh.jpg" alt="#"
+                                 class="blog__media-img">
+                        </div>
+                        <span class="blog__text">Thay đổi ngoại hình, chàng trai lạnh lùng ít nói khiến cô hoa khôi rung động</span>
+                    </a>
+                </div>
+                <div class="col l-6 height-100">
+                    <a href="#" class="blog__item">
+                        <div class="blog__media">
+                            <img src="~/assets/Images/30shine-nam-sinh-kien-truc-lot-xac.jpg" alt="#"
+                                 class="blog__media-img">
+                        </div>
+                        <span class="blog__text">Can đảm thay đổi mái tóc 7 năm, nam sinh thay đổi kiểu tóc mới cực đẹp</span>
+                    </a>
+                </div>
+                <span class="banner-control banner-control--right" onclick="clickNextSlide()">
+                    <i class="banner-control__icon fa fa-angle-right" aria-hidden="true"></i>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- introduce -->
+    @*@Html.Action("getDataPostHomePage", "Posts")*@
+    <!-- product-sale -->
+    @* Những câu hỏi tư vấn *@
+    <div class="content-product-sale layout">
+        <div class="wide grid">
+            <div class="head">
+                <div class="head__title">
+                    <div class="head__title--main">Ưu đãi</div>
+                    <div class="head__title--sub">Quà tặng, chiết khấu được cập nhật liên tục</div>
+                </div>
+                <a href="#" class="head__view-all">
+                    <span class="col c-0">Xem tất cả</span>
+                    <span class="head__view-all--icon">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </span>
+                </a>
+            </div>
+            <div class="blog__list row layout-20">
+                <span class="banner-control banner-control--left" onclick="clickNextSlide()">
+                    <i class="banner-control__icon fa fa-angle-left" aria-hidden="true"></i>
+                </span>
+                <div class="col l-4 m-12 c-12">
+                    <a href="#" class="blog__item">
+                        <div class="blog__media">
+                            <img src="~/assets/Images/small_ACSYS_vuong_4db7dc1695.jpg" alt="#"
+                                 class="blog__media-img">
+                        </div>
+                        <span class="blog__text limits-text-2 blog__text-product-sale">Nói gì với stylist để có kiểu tóc ưng ý</span>
+                    </a>
+                </div>
+                <div class="col l-4 m-12 c-12">
+                    <a href="#" class="blog__item">
+                        <div class="blog__media">
+                            <img src="~/assets/Images/small_Mood_dep_trai_11_7298a8b45d.jpg" alt="#"
+                                 class="blog__media-img">
+                        </div>
+                        <span class="blog__text limits-text-2 blog__text-product-sale">Nói gì với stylist để có kiểu tóc ưng ý</span>
+                    </a>
+                </div>
+                <div class="col l-4 m-12 c-12">
+                    <a href="#" class="blog__item">
+                        <div class="blog__media">
+                            <img src="~/assets/Images/small_Mood_dep_trai_9_ea25c333c8.jpg" alt="#"
+                                 class="blog__media-img">
+                        </div>
+                        <span class="blog__text limits-text-2 blog__text-product-sale">Nói gì với stylist để có kiểu tóc ưng ý</span>
+                    </a>
+                </div>
+                <span class="banner-control banner-control--right" onclick="clickNextSlide()">
+                    <i class="banner-control__icon fa fa-angle-right" aria-hidden="true"></i>
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- product -->
+    @Html.Action("loadSanPhamCoGiamGia", "SanPham")
+    @* Những dịch vụ khác *@
+    <div class="content-care-custom layout">
+        <div class="wide grid">
+            <div class="head layout-20">
+                <div class="head__title">
+                    <div class="head__title--main">30shine shop</div>
+                    <div class="head__title--sub">Mỹ phẩm nam cao cấp chính hãng</div>
+                </div>
+            </div>
+            <div class="content-banner relative">
+                <img src="~/assets/Images/banner-30shine-care-5.jpg"
+                     alt="#" class="content-banner__img">
+                <div class="banner__wrapper">
+                    <div class="banner__text">
+                        <div class="banner__text--main">VÌ CHẤT LƯỢNG PHỤC VỤ LÀ HÀNG ĐẦU</div>
+                        <div class="banner__text--sub">Áp dụng tại salon bất kỳ toàn hệ thống 30Shine</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog__list layout-20 row">
+                <div class="col l-3 m-12 c-12">
+                    <a href="#" class="list__item">
+                        <div class="list__item-media">
+                            <img src="~/assets/Images/1-care.png"
+                                 alt="" class="list__item-media-img">
+                        </div>
+                        <div class="list__item-text">
+                            <div class="list__item-text--main">3 ngày</div>
+                            <div class="list__item-text--sub">Đổi / trả hàng miễn phí</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col l-3 m-12 c-12">
+                    <a href="#" class="list__item">
+                        <div class="list__item-media">
+                            <img src="~/assets/Images/2-care.png"
+                                 alt="" class="list__item-media-img">
+                        </div>
+                        <div class="list__item-text">
+                            <div class="list__item-text--main">7 ngày</div>
+                            <div class="list__item-text--sub">Chỉnh sửa tóc miễn phí</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col l-3 m-12 c-12">
+                    <a href="#" class="list__item">
+                        <div class="list__item-media">
+                            <img src="~/assets/Images/3-care.png"
+                                 alt="" class="list__item-media-img">
+                        </div>
+                        <div class="list__item-text">
+                            <div class="list__item-text--main">15 ngày</div>
+                            <div class="list__item-text--sub">Bảo hành uốn nhuộm</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col l-3 m-12 c-12">
+                    <a href="#" class="list__item">
+                        <div class="list__item-media">
+                            <img src="~/assets/Images/4-care.png"
+                                 alt="" class="list__item-media-img">
+                        </div>
+                        <div class="list__item-text">
+                            <div class="list__item-text--main">Giảm 20%</div>
+                            <div class="list__item-text--sub">Giảm 20% nếu chờ đợi quá lâu</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

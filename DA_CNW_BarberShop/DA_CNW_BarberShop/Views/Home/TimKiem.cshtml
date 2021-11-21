@@ -1,0 +1,108 @@
+﻿@model List<DA_CNW_BarberShop.Models.TTSanPham>
+@{
+    ViewBag.Title = "TimKiem";
+    Layout = "~/Views/Shared/_Layout_SanPham.cshtml";
+}
+
+<h2>Tìm kiếm sản phẩm</h2>
+<div class="product-content">
+    <div class="product-content__heading">
+        <div class="product-content__heading-text">
+            <span class="product-content__heading--main">GỢI Ý HÔM NAY MUA SẮM LIỀN TAY</span>
+            <span class="product-content__heading--sub">Lựa Chọn Hàng Đầu Dành Cho Quý Khách</span>
+        </div>
+        <div class="wide grid">
+            @Html.Action("TenLoaiSanPham", "SanPham")
+        </div>
+    </div>
+    <div class="products">
+        <div class="grid wide">
+            <div class="product-list row">
+                @{
+                    foreach (var item in Model)
+                    {
+                        <div class="col l-3 m-6 c-12">
+                            <a href="@Url.Action("XemChiTietSanPham", "SanPham", new {@MaSP = item.SanPhamID })" class="product-item">
+                                <img src=@Url.Content("~/assets/Images/img-product/" + item.HinhAnh) alt="" class="product-item__img">
+                                <span class="product-item__name">@item.TenSanPham</span>
+                                <div class="product-item__price">
+                                    <span class="product-item__price--main">
+                                        @string.Format("{0:0,0}", @item.GiaSau) VNĐ
+                                    </span>
+                                    @if (item.GiaSau != item.GiaSanPham)
+                                    {
+                                        <span style="text-decoration-line: line-through" class="product-item__price--sub">
+
+                                            @string.Format("{0:0,0}", @item.GiaSanPham) VNĐ
+                                        </span>
+                                    }
+                                </div>
+
+                                <span class="product-item__star">
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                </span>
+                                @if (@item.LoaiGiamGia != "CHUAGIAMGIA")
+                                {
+                                    <div class="sticker-percent">
+                                        <div class="sticker-percent__text">
+                                            <p>- @item.TiLeGiamGia %</p>
+                                        </div>
+                                    </div>
+                                }
+                            </a>
+                        </div>
+                    }
+                }
+            </div>
+            @*<span class="pagination_text">
+                Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+            </span>
+
+            @Html.PagedListPager(Model, i => Url.Action("DanhSachSanPham", "SanPham", new { i, @class = "123123" }))*@
+        </div>
+    </div>
+    @* Thương hiệu nổi bật *@
+    <div class="trademark wide grid">
+        <div class="trademark-heading">
+            <h2>THƯƠNG HIỆU NỔI BẬT</h2>
+        </div>
+        <div class="row">
+            <div class="col l-2 c-6 m-4">
+                <div class="trademark-item">
+                    <img src="~/assets/Images/banner_vendors_show_1_img.jpg" alt="">
+                </div>
+            </div>
+            <div class="col l-2 c-6 m-4">
+                <div class="trademark-item">
+                    <img src="~/assets/Images/banner_vendors_show_2_img.jpg" alt="">
+                </div>
+            </div>
+            <div class="col l-2 c-6 m-4">
+                <div class="trademark-item">
+                    <img src="~/assets/Images/banner_vendors_show_3_img.jpg" alt="">
+                </div>
+            </div>
+            <div class="col l-2 c-6 m-4">
+                <div class="trademark-item">
+                    <img src="~/assets/Images/banner_vendors_show_4_img.jpg" alt="">
+                </div>
+            </div>
+            <div class="col l-2 c-6 m-4">
+                <div class="trademark-item">
+                    <img src="~/assets/Images/banner_vendors_show_5_img.jpg" alt="">
+                </div>
+            </div>
+            <div class="col l-2 c-6 m-4">
+                <div class="trademark-item">
+                    <img src="~/assets/Images/banner_vendors_show_6_img.jpg" alt="">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+

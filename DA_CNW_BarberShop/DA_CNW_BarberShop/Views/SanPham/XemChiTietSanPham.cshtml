@@ -1,0 +1,150 @@
+﻿
+@{
+    ViewBag.Title = "XemChiTietSanPham";
+    Layout = "~/Views/Shared/_Layout_SanPham.cshtml";
+}
+@model List<DA_CNW_BarberShop.Models.TTSanPham>
+@using (Html.BeginForm())
+{
+    @*@{*@
+foreach (var item in Model)
+{
+        <div class="product-detail">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-4">
+                        <div class="product-detail__img">
+                            <div class="product-detail__img-main">
+                                <img src=@Url.Content("~/assets/Images/img-product/" + item.HinhAnh)>
+                            </div>
+                            <div class="product-detail__img-list">
+                                <img src="~/assets/Images/30S7RYPZ-xit-tao-phong-Surf-Tonic.png" alt="" class="product-detail__img-item active">
+                                <img src="~/assets/Images/30S7RYPZ-xit-tao-phong-Surf-Tonic.png" alt="" class="product-detail__img-item">
+                                <img src="~/assets/Images/30S7RYPZ-xit-tao-phong-Surf-Tonic.png" alt="" class="product-detail__img-item">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col l-6">
+                        <div class="product-detail__text">
+                            <h2 class="product-detail__name">@item.TenSanPham</h2>
+                            <div class="product-detail__star">
+                                <div class="product-detail__star-number">0</div>
+                                <span class="product-item__star product-item__star--mb">
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <div class="product-detail__price">
+                                @string.Format("{0:0,0}", item.GiaSau) VNĐ
+                            </div>
+                            <div class="product-detail__sale">
+                                <span class="product-detail__sale-main">
+                                    <div class="product-detail__sale-main--name">Khuyến mãi</div>
+                                    <span class="product-detail__sale-main--icon">
+                                        <img src="~/assets/Images/voucher.svg" alt="nextjs" width="24" height="24" class="ml-2 self-center">
+                                    </span>
+                                    <span class="product-detail__sale-main--sub">Miễn phí vận chuyển cho đơn từ 300.000đ</span>
+                                </span>
+                            </div>
+                            <div class="product-detail__quantity">
+                                <div class="product-detail__quantity-text">Số lượng</div>
+                                <div class="product-detail__quantity-block">
+                                    <button class="btn-control-product product-detail__quantity-back">-</button>
+                                    <input type="text" id="quantity-product" class="product-detail__quantity-input" value="1">
+                                    <button class="btn-control-product product-detail__quantity-advan">+</button>
+                                </div>
+                            </div>
+                            <div class="product-detail__control">
+                                <a href="@Url.Action("ThemGioHang", "GioHang", new { MaSanPham = item.SanPhamID, @strUrl=Request.Url.ToString()})" class="btn product-detail__control-add-cart">
+                                    <span>
+                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                    </span>
+                                    <h2>Thêm giỏ hàng</h2>
+                                </a>
+                                <a href="@Url.Action("DanhSachSanPham", "SanPham")" class="btn product-detail__control-add-now">Mua tiếp</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-2">
+                        <ul class="product-comit">
+                            <li class="product-comit-item">
+                                <a href="#" class="product-comit-link">
+                                    <img src="~/assets/Images/usp-detail-icon-1.png" alt="">
+                                    Cam kết 7 ngày hiệu quả
+                                </a>
+                            </li>
+                            <li class="product-comit-item">
+                                <a href="#" class="product-comit-link">
+                                    <img src="~/assets/Images/usp-detail-icon-2.png" alt="">
+                                    Mua 1 hưởng 5 đặc quyền
+                                </a>
+                            </li>
+                            <li class="product-comit-item">
+                                <a href="#" class="product-comit-link">
+                                    <img src="~/assets/Images/usp-detail-icon-3.png" alt="">
+                                    Chính sách hoàn tiền 120%
+                                </a>
+                            </li>
+                            <li class="product-comit-item">
+                                <a href="#" class="product-comit-link">
+                                    <img src="~/assets/Images/usp-detail-icon-4.png" alt="">
+                                    Chất lượng sản phẩm cấp cao nhất
+                                </a>
+                            </li>
+                            <li class="product-comit-item">
+                                <a href="#" class="product-comit-link">
+                                    <img src="~/assets/Images/usp-detail-icon-5.png" alt="">
+                                    Giao hàng siêu tốc trong 2h
+                                </a>
+                            </li>
+                            <li class="product-comit-item">
+                                <a href="#" class="product-comit-link">
+                                    <img src="~/assets/Images/usp-detail-icon-6.png" alt="">
+                                    Đổi trả tận nơi trong 24 giờ
+                                </a>
+                            </li>
+                            <li class="product-comit-item">
+                                <a href="#" class="product-comit-link">
+                                    <img src="~/assets/Images/usp-detail-icon-8.png" alt="">
+                                    An toàn chuẩn giao vận quốc tế
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="product-detail-if">
+                <div class="grid wide">
+                    <div class="product-detail-if__title">
+                        <h2>Thông tin sản phẩm</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col l-10">
+                            <div class="product-detail-if__cotent">
+                                <div class="product-detail-if__content-name">
+                                    @item.TenSanPham
+                                </div>
+                                <div class="product-detail-if__content-descript">
+                                    @item.MoTaSanPham
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="products">
+                <div class="grid wide">
+                    <h2 class="products-title">Có thể bạn sẽ thích</h2>
+                    @Html.Action("loadSanPhamCoGiamGia", "SanPham")
+                </div>
+            </div>
+        </div>
+        }
+    }
+}
+

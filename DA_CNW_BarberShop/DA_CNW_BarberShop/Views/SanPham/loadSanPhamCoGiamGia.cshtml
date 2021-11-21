@@ -1,0 +1,87 @@
+﻿
+@model List<DA_CNW_BarberShop.Models.TTSanPham>
+
+<div class="content-products">
+    <div class="wide grid">
+        <div class="head">
+            <div class="head__title">
+                <div class="head__title--main">30shine shop</div>
+                <div class="head__title--sub">Mỹ phẩm nam cao cấp chính hãng</div>
+            </div>
+            <a href="#" class="head__view-all">
+                <span class="col c-0">Xem tất cả</span>
+                <span class="head__view-all--icon">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </span>
+            </a>
+        </div>
+        <a href="#" class="content-banner">
+            <img src="~/assets/Images/211001_Banner_store_pc.jpg" alt="#" class="content-banner__img">
+        </a>
+        <div class="relative">
+            <span class="banner-control banner-control--left" onclick="clickNextSlide()">
+                <i class="banner-control__icon fa fa-angle-left" aria-hidden="true"></i>
+            </span>
+            <div class="blog__list scroll-x row layout-20">
+                @*@foreach (var item in Model)
+        {
+
+            <a href="@Url.Action("getDataDetailProduct", "Products", new {@id = item.SanPhamID })" class="blog__item col l-3 m-12 c-12">
+                <div class="blog__media">
+                    <img src="~/assets/Images/img-product/@item.HinhAnh" alt="" class="blog__media-img .blog__media-img--product">
+                </div>
+                <span class="blog__text limits-text-1 padding-left-right-25 black-color">@item.TenSanPham</span>
+                <span class="blog__text limits-text-1 padding-left-right-25 margin-15 black-color">@string.Format("{0:0,0}", item.GiaSanPham) VNĐ</span>
+                <button class="btn product-btn margin-15">
+                    <span class="product-btn__text">Mua ngay</span>
+                    <span class="product-btn__icon">
+                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </span>
+                </button>
+            </a>
+        }*@
+                @{
+                    foreach (var item in Model)
+                    {
+                        <div class="col l-3 m-6 c-12">
+                            <a href="@Url.Action("XemChiTietSanPham", "SanPham", new {@MaSP = item.SanPhamID })" class="product-item">
+                                <img src=@Url.Content("~/assets/Images/img-product/" + item.HinhAnh) alt="" class="product-item__img">
+                                <span class="product-item__name">@item.TenSanPham</span>
+                                <div class="product-item__price">
+                                    <span class="product-item__price--main">
+                                        @string.Format("{0:0,0}", @item.GiaSau) VNĐ
+                                    </span>
+                                    @if (item.GiaSau != item.GiaSanPham)
+                                    {
+                                        <span style="text-decoration-line: line-through" class="product-item__price--sub">
+                                            @item.GiaSanPham
+                                        </span>
+                                    }
+                                </div>
+
+                                <span class="product-item__star">
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                </span>
+                                @if (@item.LoaiGiamGia != "CHUAGIAMGIA")
+                                {
+                                    <div class="sticker-percent">
+                                        <div class="sticker-percent__text">
+                                            <p>- @item.TiLeGiamGia %</p>
+                                        </div>
+                                    </div>
+                                }
+                            </a>
+                        </div>
+                    }
+                }
+            </div>
+            <span class="banner-control banner-control--right" onclick="clickNextSlide()">
+                <i class="banner-control__icon fa fa-angle-right" aria-hidden="true"></i>
+            </span>
+        </div>
+    </div>
+</div>

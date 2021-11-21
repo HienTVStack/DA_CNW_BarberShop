@@ -1,0 +1,52 @@
+﻿@model List<DA_CNW_BarberShop.Models.TTSanPham>
+
+<div class="product-heading-navbar__cart">
+    <span>
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+    </span>
+    <!-- <ul class="cart-list">
+        <li class="cart-item"></li>
+    </ul> -->
+    <div class="header__cart--list">
+        @{
+            if (@ViewBag.SoLuong == 0)
+            {
+                <img src="~/assets/Images/empty_state.png" alt="" class="header__cart--list-no-cart-img" />
+                <span class="header__cart--list-no-cart-msg">Chưa có sản phẩm</span>
+            }
+            else
+            {
+                <h4 class="header__cart--heading">
+                    Sản phẩm đã thêm
+                </h4>
+
+                <ul class="header__cart--list-item">
+                    @foreach (var item in Model)
+                    {
+                        <li class="header__cart--item">
+                            <img src="@Url.Content("~/assets/Images/img-product/" + item.HinhAnh)" alt="" />
+                            <div class="header__cart--item-info">
+                                <div class="header__cart--item-head">
+                                    <h5 class="header__cart--item-name">
+                                        @item.TenSanPham
+                                    </h5>
+                                    <div class="heder__cart--item-price-wrap">
+                                        <span class="header__cart--item-price">@item.GiaSau</span>
+                                        <span class="header__cart--item-multiply">x</span>
+                                        <span class="header__cart--item-quantity">2</span>
+                                    </div>
+                                </div>
+                                <div class="header__cart--item-body">
+                                    <span class="header__cart--item-desc">Ngày thêm: @item.LoaiSanPham</span>
+                                    <span class="header__cart--item-remove">Xóa</span>
+                                </div>
+                            </div>
+                        </li>
+                    }
+                </ul>
+            }
+        }
+        <!-- <div class="clearfix"></div> -->
+        <a href="@Url.Action("GioHang", "GioHang")" class="header__cart--view-cart btn btn-primary">Xem giỏi hàng</a>
+    </div>
+</div>
